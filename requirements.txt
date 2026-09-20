@@ -1,0 +1,18 @@
+# --- LoRA Studio GUI (needed to launch the app at all) ---
+Pillow>=10.0.0
+PyYAML>=6.0
+
+# --- Generate tab only ---------------------------------------------------
+# Training runs inside ai-toolkit's own environment, so you do NOT need torch
+# here for training. You DO need it for the Generate tab.
+#
+# Install torch FIRST, with the CUDA build that matches your driver, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+# then:
+diffusers>=0.36.0
+transformers>=4.47.0
+accelerate>=1.0.0
+safetensors>=0.4.0
+peft>=0.14.0
+sentencepiece
+protobuf
